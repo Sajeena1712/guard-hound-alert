@@ -7,8 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Shield, Activity, AlertTriangle, Zap } from 'lucide-react';
-import dashboardHero from '@/assets/dashboard-hero.jpg';
-import detectionExample from '@/assets/detection-example.jpg';
 
 const Dashboard = () => {
   return (
@@ -17,35 +15,26 @@ const Dashboard = () => {
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
         {/* Hero Section */}
-        <section className="relative overflow-hidden rounded-lg bg-gradient-to-r from-primary to-muted">
-          <div className="absolute inset-0 opacity-10">
-            <img 
-              src={dashboardHero} 
-              alt="AI Security Dashboard" 
-              className="w-full h-full object-cover"
-            />
+        <section className="relative overflow-hidden rounded-lg bg-gradient-to-r from-primary to-muted p-8 text-center">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <Shield className="h-8 w-8 text-primary-foreground" />
+            <h1 className="text-3xl font-bold text-primary-foreground">
+              AI-Powered Smart Dog Detection System
+            </h1>
           </div>
-          <div className="relative p-8 text-center">
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <Shield className="h-8 w-8 text-primary-foreground" />
-              <h1 className="text-3xl font-bold text-primary-foreground">
-                AI-Powered Smart Dog Detection System
-              </h1>
-            </div>
-            <p className="text-primary-foreground/90 max-w-2xl mx-auto mb-6">
-              Real-time monitoring and intelligent alerts for enhanced safety and security.
-              Advanced AI detection with IoT integration for comprehensive area surveillance.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <Button variant="secondary" size="lg">
-                <Activity className="h-4 w-4 mr-2" />
-                View Live Feed
-              </Button>
-              <Button variant="outline" size="lg" className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                <Zap className="h-4 w-4 mr-2" />
-                System Settings
-              </Button>
-            </div>
+          <p className="text-primary-foreground/90 max-w-2xl mx-auto mb-6">
+            Real-time monitoring and intelligent alerts for enhanced safety and security.
+            Advanced AI detection with IoT integration for comprehensive area surveillance.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <Button variant="secondary" size="lg">
+              <Activity className="h-4 w-4 mr-2" />
+              View Live Feed
+            </Button>
+            <Button variant="outline" size="lg" className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Zap className="h-4 w-4 mr-2" />
+              System Settings
+            </Button>
           </div>
         </section>
 
@@ -90,11 +79,13 @@ const Dashboard = () => {
               <CardContent>
                 <div className="flex flex-col md:flex-row gap-4">
                   <div className="md:w-1/2">
-                    <img 
-                      src={detectionExample} 
-                      alt="Dog detection example" 
-                      className="w-full h-48 object-cover rounded-lg border border-dashboard-card-border"
-                    />
+                    <div className="w-full h-48 bg-security-gray border border-dashboard-card-border rounded-lg flex items-center justify-center">
+                      <div className="text-center">
+                        <AlertTriangle className="h-12 w-12 text-alert-critical mx-auto mb-2" />
+                        <p className="text-sm text-muted-foreground">Live Detection Feed</p>
+                        <p className="text-xs text-muted-foreground">Camera: CAM-001</p>
+                      </div>
+                    </div>
                   </div>
                   <div className="md:w-1/2 space-y-3">
                     <div className="space-y-2">
