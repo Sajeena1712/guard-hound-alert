@@ -24,6 +24,45 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				// Security Dashboard Colors
+				security: {
+					gray: 'hsl(var(--security-gray))',
+					'gray-dark': 'hsl(var(--security-gray-dark))',
+					border: 'hsl(var(--security-border))'
+				},
+				
+				// Alert System
+				alert: {
+					critical: 'hsl(var(--alert-critical))',
+					warning: 'hsl(var(--alert-warning))',
+					success: 'hsl(var(--alert-success))',
+					'critical-bg': 'hsl(var(--alert-critical-bg))',
+					'warning-bg': 'hsl(var(--alert-warning-bg))'
+				},
+				
+				// Dashboard Elements
+				dashboard: {
+					card: 'hsl(var(--dashboard-card))',
+					'card-border': 'hsl(var(--dashboard-card-border))',
+					hover: 'hsl(var(--dashboard-hover))'
+				},
+				
+				// Status & Map
+				status: {
+					online: 'hsl(var(--status-online))',
+					offline: 'hsl(var(--status-offline))',
+					pulse: 'hsl(var(--status-pulse))'
+				},
+				
+				map: {
+					background: 'hsl(var(--map-background))'
+				},
+				
+				chart: {
+					grid: 'hsl(var(--chart-grid))'
+				},
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
